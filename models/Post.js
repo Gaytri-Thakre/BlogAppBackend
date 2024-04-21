@@ -11,6 +11,16 @@ const postSchema = new mongoose.Schema(
             required:true,
             maxLength:100,
         },
+        // comment 
+        comment:[{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Comment'
+        }],
+        // like
+        Like:[{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Like'
+        }],
         createdAt:{
             type:Date,
             required:true,
